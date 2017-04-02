@@ -1,0 +1,6 @@
+version: "Apple Swift version 3.0.2 (swiftlang-800.0.63 clang-800.0.42.1)"
+options: "fa71d01d1bf52b33638bc83aacd68e49"
+build_time: [544395060, 464451000]
+inputs:
+  "/Users/jamesjongs/Desktop/Projects/SpeechTest/SpeechTest/ViewController.swift": [544395055, 0]
+  "/Users/jamesjongs/Desktop/Projects/SpeechTest/SpeechTest/AppDelegate.swift": [544356860, 0]
