@@ -116,6 +116,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 #if defined(__has_feature) && __has_feature(modules)
 @import UIKit;
+@import CoreGraphics;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -135,14 +136,35 @@ SWIFT_CLASS("_TtC10SpeechTest11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class UIButton;
+@class UIColor;
+@class NSCoder;
+@class NSTextContainer;
+
+SWIFT_CLASS("_TtC10SpeechTest19InterpretedTextView")
+@interface InterpretedTextView : UITextView
+@property (nonatomic) CGFloat cornerRadius;
+@property (nonatomic, strong) UIColor * _Nonnull borderColor;
+@property (nonatomic) CGFloat borderWidth;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithFrame:(CGRect)frame textContainer:(NSTextContainer * _Nullable)textContainer OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC10SpeechTest12RecordButton")
+@interface RecordButton : UIButton
+@property (nonatomic) CGFloat cornerRadius;
+@property (nonatomic, strong) UIColor * _Nonnull borderColor;
+@property (nonatomic) CGFloat borderWidth;
+@property (nonatomic) CGFloat width;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @class AVAudioEngine;
 @class SFSpeechRecognizer;
 @class SFSpeechAudioBufferRecognitionRequest;
 @class SFSpeechRecognitionTask;
-@class UITextView;
 @class NSBundle;
-@class NSCoder;
 
 SWIFT_CLASS("_TtC10SpeechTest20SpeechViewController")
 @interface SpeechViewController : UIViewController

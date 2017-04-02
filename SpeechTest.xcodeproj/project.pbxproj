@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A745E1001E90F95D00C8E8CE /* RecordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A745E0FF1E90F95D00C8E8CE /* RecordButton.swift */; };
+		A745E1031E9102CE00C8E8CE /* InterpretedTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A745E1021E9102CE00C8E8CE /* InterpretedTextView.swift */; };
 		A74A4C2E1E8FB4FC00A46D15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74A4C2D1E8FB4FC00A46D15 /* AppDelegate.swift */; };
 		A74A4C301E8FB4FC00A46D15 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74A4C2F1E8FB4FC00A46D15 /* ViewController.swift */; };
 		A74A4C331E8FB4FC00A46D15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A74A4C311E8FB4FC00A46D15 /* Main.storyboard */; };
@@ -26,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A745E0FF1E90F95D00C8E8CE /* RecordButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordButton.swift; sourceTree = "<group>"; };
+		A745E1021E9102CE00C8E8CE /* InterpretedTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterpretedTextView.swift; sourceTree = "<group>"; };
 		A74A4C2A1E8FB4FC00A46D15 /* SpeechTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeechTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A74A4C2D1E8FB4FC00A46D15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A74A4C2F1E8FB4FC00A46D15 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +60,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A745E1011E90F96E00C8E8CE /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				A74A4C2D1E8FB4FC00A46D15 /* AppDelegate.swift */,
+				A74A4C311E8FB4FC00A46D15 /* Main.storyboard */,
+				A74A4C341E8FB4FC00A46D15 /* Assets.xcassets */,
+				A74A4C361E8FB4FC00A46D15 /* LaunchScreen.storyboard */,
+				A74A4C391E8FB4FC00A46D15 /* Info.plist */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
 		A74A4C211E8FB4FA00A46D15 = {
 			isa = PBXGroup;
 			children = (
@@ -77,12 +93,10 @@
 		A74A4C2C1E8FB4FC00A46D15 /* SpeechTest */ = {
 			isa = PBXGroup;
 			children = (
-				A74A4C2D1E8FB4FC00A46D15 /* AppDelegate.swift */,
+				A745E1011E90F96E00C8E8CE /* Assets */,
 				A74A4C2F1E8FB4FC00A46D15 /* ViewController.swift */,
-				A74A4C311E8FB4FC00A46D15 /* Main.storyboard */,
-				A74A4C341E8FB4FC00A46D15 /* Assets.xcassets */,
-				A74A4C361E8FB4FC00A46D15 /* LaunchScreen.storyboard */,
-				A74A4C391E8FB4FC00A46D15 /* Info.plist */,
+				A745E0FF1E90F95D00C8E8CE /* RecordButton.swift */,
+				A745E1021E9102CE00C8E8CE /* InterpretedTextView.swift */,
 			);
 			path = SpeechTest;
 			sourceTree = "<group>";
@@ -203,6 +217,8 @@
 			files = (
 				A74A4C301E8FB4FC00A46D15 /* ViewController.swift in Sources */,
 				A74A4C2E1E8FB4FC00A46D15 /* AppDelegate.swift in Sources */,
+				A745E1031E9102CE00C8E8CE /* InterpretedTextView.swift in Sources */,
+				A745E1001E90F95D00C8E8CE /* RecordButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +428,7 @@
 				A74A4C491E8FB4FC00A46D15 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A74A4C4A1E8FB4FC00A46D15 /* Build configuration list for PBXNativeTarget "SpeechTestTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +437,7 @@
 				A74A4C4C1E8FB4FC00A46D15 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

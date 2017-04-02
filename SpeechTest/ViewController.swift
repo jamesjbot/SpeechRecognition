@@ -9,7 +9,7 @@ import Speech
 import UIKit
 import AVKit
 
-
+@IBDesignable
 class SpeechViewController: UIViewController {
 
     // MARK: CONTANTS
@@ -20,9 +20,10 @@ class SpeechViewController: UIViewController {
     // MARK: VARIABLES
 
     var recordingStateIsOn: Bool = false
-    
+
     @IBOutlet weak var textView: UITextView!
-    @IBOutlet weak var recordButton: UIButton!
+
+    @IBInspectable @IBOutlet weak var recordButton: UIButton!
 
     @IBAction func recordAction(_ sender: UIButton) {
 
