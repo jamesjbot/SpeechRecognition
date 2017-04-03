@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -11,88 +11,81 @@
     </dependencies>
     <scenes>
         <!--Speech View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="mFr-WA-DNx">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="SpeechViewController" customModule="SpeechTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fjq-82-YdL" customClass="SpeechViewController" customModule="SpeechTest" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="Cvk-v0-ugj"/>
+                        <viewControllerLayoutGuide type="bottom" id="9eY-2a-N8s"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="NrS-14-nDa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="center" axis="vertical" distribution="fillProportionally" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5IM-av-6jy">
-                                <rect key="frame" x="16" y="28" width="343" height="631"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="U1b-TK-0Ma">
+                                <rect key="frame" x="16" y="20" width="343" height="639"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="249" placeholderIntrinsicWidth="375" placeholderIntrinsicHeight="563" editable="NO" text="Recognized appears here goes here" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u33-Pz-C6r" customClass="InterpretedTextView" customModule="SpeechTest" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="601"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <inset key="scrollIndicatorInsets" minX="7" minY="16" maxX="7" maxY="23"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="First Textview" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yaK-8g-mYI" customClass="InterpretedTextView" customModule="SpeechTest" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="8" width="327" height="601"/>
+                                        <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="3"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                                 <color key="value" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="22"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Nz-Az-xc1" customClass="RecordButton" customModule="SpeechTest" customModuleProvider="target">
-                                        <rect key="frame" x="144" y="609" width="55" height="22"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6cI-U3-DZg" customClass="RecordButton" customModule="SpeechTest" customModuleProvider="target">
+                                        <rect key="frame" x="143.5" y="617" width="56" height="14"/>
                                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <inset key="contentEdgeInsets" minX="8" minY="3" maxX="8" maxY="3"/>
-                                        <size key="titleShadowOffset" width="3" height="3"/>
-                                        <state key="normal">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="Record">
-                                                    <attributes>
-                                                        <font key="NSFont" size="12" name="Geneva"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                        </state>
+                                        <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                                        <state key="normal" title="Button"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="7"/>
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="width">
-                                                <real key="value" value="13"/>
+                                                <real key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="recordAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kA9-Pw-bMv"/>
+                                            <action selector="record:" destination="fjq-82-YdL" eventType="touchUpInside" id="D2L-ax-cMn"/>
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="yaK-8g-mYI" firstAttribute="leading" secondItem="U1b-TK-0Ma" secondAttribute="leadingMargin" id="2zH-hU-7TY"/>
+                                </constraints>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="leadingMargin" secondItem="5IM-av-6jy" secondAttribute="leading" id="Djn-00-LUg"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="5IM-av-6jy" secondAttribute="trailing" id="LNj-Ck-lKs"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5IM-av-6jy" secondAttribute="bottom" constant="8" id="dgR-Zx-F7h"/>
-                            <constraint firstItem="5IM-av-6jy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="s6J-hL-Dbz"/>
+                            <constraint firstItem="U1b-TK-0Ma" firstAttribute="top" secondItem="Cvk-v0-ugj" secondAttribute="bottom" id="I7h-Jr-wkr"/>
+                            <constraint firstItem="9eY-2a-N8s" firstAttribute="top" secondItem="U1b-TK-0Ma" secondAttribute="bottom" constant="8" symbolic="YES" id="LDG-dy-ABt"/>
+                            <constraint firstItem="U1b-TK-0Ma" firstAttribute="leading" secondItem="NrS-14-nDa" secondAttribute="leadingMargin" id="gjM-DM-7zm"/>
+                            <constraint firstItem="U1b-TK-0Ma" firstAttribute="trailing" secondItem="NrS-14-nDa" secondAttribute="trailingMargin" id="oy7-yp-TGe"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="recordButton" destination="2Nz-Az-xc1" id="CPQ-4V-Nrx"/>
-                        <outlet property="textView" destination="u33-Pz-C6r" id="fqE-vs-tj1"/>
+                        <outlet property="recordButton" destination="6cI-U3-DZg" id="2dz-9C-v1i"/>
+                        <outlet property="textView" destination="yaK-8g-mYI" id="Vnb-3l-b8T"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2yP-2a-pVc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="116" y="122.78860569715144"/>
+            <point key="canvasLocation" x="-1063.2" y="114.69265367316342"/>
         </scene>
     </scenes>
 </document>

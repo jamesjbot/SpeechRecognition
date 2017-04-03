@@ -21,12 +21,11 @@ class SpeechViewController: UIViewController {
 
     var recordingStateIsOn: Bool = false
 
-    @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var textView: InterpretedTextView!
 
-    @IBInspectable @IBOutlet weak var recordButton: UIButton!
+    @IBOutlet weak var recordButton: RecordButton!
 
-    @IBAction func recordAction(_ sender: UIButton) {
-
+    @IBAction func record(_ sender: Any) {
         if recordingStateIsOn {
             stopRecording()
             recordButton.titleLabel?.text = "Record"
@@ -40,8 +39,10 @@ class SpeechViewController: UIViewController {
                 textView.text = "Error Recording"
             }
         }
-
         recordingStateIsOn = !recordingStateIsOn
+    }
+
+    @IBAction func recordAction(_ sender: UIButton) {
 
     }
 

@@ -171,8 +171,9 @@ SWIFT_CLASS("_TtC10SpeechTest20SpeechViewController")
 @property (nonatomic, readonly) NSInteger busNumber;
 @property (nonatomic, readonly) uint32_t bufferSize;
 @property (nonatomic) BOOL recordingStateIsOn;
-@property (nonatomic, weak) IBOutlet UITextView * _Null_unspecified textView;
-@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified recordButton;
+@property (nonatomic, weak) IBOutlet InterpretedTextView * _Null_unspecified textView;
+@property (nonatomic, weak) IBOutlet RecordButton * _Null_unspecified recordButton;
+- (IBAction)record:(id _Nonnull)sender;
 - (IBAction)recordAction:(UIButton * _Nonnull)sender;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;

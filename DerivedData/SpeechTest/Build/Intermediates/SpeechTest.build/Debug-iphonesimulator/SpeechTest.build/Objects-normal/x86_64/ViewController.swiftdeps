@@ -6,39 +6,41 @@ provides-nominal:
 provides-member:
 - ["C10SpeechTest20SpeechViewController", ""]
 provides-dynamic-lookup:
-- "recordButton"
-- "recordingStateIsOn"
-- "viewDidLoad"
-- "speechRecognizer"
-- "recognitionTask"
-- "busNumber"
-- "recordAction"
-- "textView"
-- "didReceiveMemoryWarning"
-- "recognitionRequest"
 - "bufferSize"
 - "audioEngine"
+- "speechRecognizer"
+- "record"
+- "textView"
+- "recognitionTask"
+- "recognitionRequest"
+- "recordAction"
+- "busNumber"
+- "recordButton"
+- "didReceiveMemoryWarning"
+- "recordingStateIsOn"
+- "viewDidLoad"
 depends-top-level:
-- !private "OperationQueue"
 - "AVAudioEngine"
-- !private "SFSpeechURLRecognitionRequest"
-- "BooleanLiteralType"
-- "SFSpeechRecognitionTask"
-- !private "!"
-- !private "Void"
-- !private "print"
-- "UIButton"
-- "Bool"
-- "SFSpeechRecognizer"
-- !private "StringLiteralType"
-- "UnicodeScalarType"
-- !private "URL"
-- "AssignmentPrecedence"
-- "UIViewController"
-- "SFSpeechAudioBufferRecognitionRequest"
-- "UITextView"
+- "InterpretedTextView"
 - "UInt32"
+- "SFSpeechRecognizer"
+- "AssignmentPrecedence"
+- !private "SFSpeechURLRecognitionRequest"
+- !private "print"
+- "SFSpeechRecognitionTask"
+- !private "Void"
+- "UIButton"
+- "RecordButton"
+- "UIViewController"
+- "UnicodeScalarType"
+- "Bool"
+- "BooleanLiteralType"
+- !private "OperationQueue"
 - "SpeechViewController"
+- !private "URL"
+- "SFSpeechAudioBufferRecognitionRequest"
+- !private "StringLiteralType"
+- !private "!"
 depends-member:
 - !private ["PSo15AVAudio3DMixing", "installTap"]
 - !private ["PSo15AVAudio3DMixing", "outputFormat"]
@@ -97,6 +99,7 @@ depends-member:
 - ["Ps9AnyObject", "recognitionRequest"]
 - ["Ps9AnyObject", "recognitionTask"]
 - ["Ps9AnyObject", "recognizeFile"]
+- ["Ps9AnyObject", "record"]
 - ["Ps9AnyObject", "recordAction"]
 - ["Ps9AnyObject", "recordButton"]
 - ["Ps9AnyObject", "recordingStateIsOn"]
@@ -163,6 +166,7 @@ depends-member:
 - ["Ps7CVarArg", "recognitionRequest"]
 - ["Ps7CVarArg", "recognitionTask"]
 - ["Ps7CVarArg", "recognizeFile"]
+- ["Ps7CVarArg", "record"]
 - ["Ps7CVarArg", "recordAction"]
 - ["Ps7CVarArg", "recordButton"]
 - ["Ps7CVarArg", "recordingStateIsOn"]
@@ -221,6 +225,7 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "recognitionRequest"]
 - ["Ps28CustomDebugStringConvertible", "recognitionTask"]
 - ["Ps28CustomDebugStringConvertible", "recognizeFile"]
+- ["Ps28CustomDebugStringConvertible", "record"]
 - ["Ps28CustomDebugStringConvertible", "recordAction"]
 - ["Ps28CustomDebugStringConvertible", "recordButton"]
 - ["Ps28CustomDebugStringConvertible", "recordingStateIsOn"]
@@ -282,6 +287,7 @@ depends-member:
 - ["Ps23CustomStringConvertible", "recognitionRequest"]
 - ["Ps23CustomStringConvertible", "recognitionTask"]
 - ["Ps23CustomStringConvertible", "recognizeFile"]
+- ["Ps23CustomStringConvertible", "record"]
 - ["Ps23CustomStringConvertible", "recordAction"]
 - ["Ps23CustomStringConvertible", "recordButton"]
 - ["Ps23CustomStringConvertible", "recordingStateIsOn"]
@@ -338,6 +344,7 @@ depends-member:
 - ["Ps9Equatable", "recognitionRequest"]
 - ["Ps9Equatable", "recognitionTask"]
 - ["Ps9Equatable", "recognizeFile"]
+- ["Ps9Equatable", "record"]
 - ["Ps9Equatable", "recordAction"]
 - ["Ps9Equatable", "recordButton"]
 - ["Ps9Equatable", "recordingStateIsOn"]
@@ -404,6 +411,7 @@ depends-member:
 - ["Ps8Hashable", "recognitionRequest"]
 - ["Ps8Hashable", "recognitionTask"]
 - ["Ps8Hashable", "recognizeFile"]
+- ["Ps8Hashable", "record"]
 - ["Ps8Hashable", "recordAction"]
 - ["Ps8Hashable", "recordButton"]
 - ["Ps8Hashable", "recordingStateIsOn"]
@@ -436,6 +444,8 @@ depends-member:
 - !private ["Vs5Int32", "deinit"]
 - !private ["Vs5Int64", "deinit"]
 - !private ["Vs4Int8", "deinit"]
+- !private ["C10SpeechTest19InterpretedTextView", "deinit"]
+- !private ["C10SpeechTest19InterpretedTextView", "text"]
 - !private ["Ps16IteratorProtocol", "Element"]
 - !private ["Ps25LosslessStringConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps25LosslessStringConvertible", "append"]
@@ -470,6 +480,7 @@ depends-member:
 - ["PSo8NSCoding", "recognitionRequest"]
 - ["PSo8NSCoding", "recognitionTask"]
 - ["PSo8NSCoding", "recognizeFile"]
+- ["PSo8NSCoding", "record"]
 - ["PSo8NSCoding", "recordAction"]
 - ["PSo8NSCoding", "recordButton"]
 - ["PSo8NSCoding", "recordingStateIsOn"]
@@ -507,6 +518,7 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "recognitionRequest"]
 - ["PSo26NSExtensionRequestHandling", "recognitionTask"]
 - ["PSo26NSExtensionRequestHandling", "recognizeFile"]
+- ["PSo26NSExtensionRequestHandling", "record"]
 - ["PSo26NSExtensionRequestHandling", "recordAction"]
 - ["PSo26NSExtensionRequestHandling", "recordButton"]
 - ["PSo26NSExtensionRequestHandling", "recordingStateIsOn"]
@@ -521,13 +533,14 @@ depends-member:
 - !private ["PSo16NSMutableCopying", "init"]
 - ["CSo8NSObject", "AVAudioEngine"]
 - ["CSo8NSObject", "Bool"]
+- ["CSo8NSObject", "InterpretedTextView"]
 - !private ["CSo8NSObject", "OperationQueue"]
+- ["CSo8NSObject", "RecordButton"]
 - ["CSo8NSObject", "SFSpeechAudioBufferRecognitionRequest"]
 - ["CSo8NSObject", "SFSpeechRecognitionTask"]
 - ["CSo8NSObject", "SFSpeechRecognizer"]
 - !private ["CSo8NSObject", "SFSpeechURLRecognitionRequest"]
 - ["CSo8NSObject", "UIButton"]
-- ["CSo8NSObject", "UITextView"]
 - ["CSo8NSObject", "UInt32"]
 - !private ["CSo8NSObject", "URL"]
 - !private ["CSo8NSObject", "Void"]
@@ -555,6 +568,7 @@ depends-member:
 - ["CSo8NSObject", "recognitionRequest"]
 - ["CSo8NSObject", "recognitionTask"]
 - ["CSo8NSObject", "recognizeFile"]
+- ["CSo8NSObject", "record"]
 - ["CSo8NSObject", "recordAction"]
 - ["CSo8NSObject", "recordButton"]
 - ["CSo8NSObject", "recordingStateIsOn"]
@@ -602,6 +616,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", "recognitionRequest"]
 - ["PSo16NSObjectProtocol", "recognitionTask"]
 - ["PSo16NSObjectProtocol", "recognizeFile"]
+- ["PSo16NSObjectProtocol", "record"]
 - ["PSo16NSObjectProtocol", "recordAction"]
 - ["PSo16NSObjectProtocol", "recordButton"]
 - ["PSo16NSObjectProtocol", "recordingStateIsOn"]
@@ -648,6 +663,8 @@ depends-member:
 - !private ["Ps16RawRepresentable", "denied"]
 - !private ["Ps16RawRepresentable", "notDetermined"]
 - !private ["Ps16RawRepresentable", "restricted"]
+- !private ["C10SpeechTest12RecordButton", "setNeedsDisplay"]
+- !private ["C10SpeechTest12RecordButton", "titleLabel"]
 - !private ["CSo37SFSpeechAudioBufferRecognitionRequest", "append"]
 - ["CSo37SFSpeechAudioBufferRecognitionRequest", "deinit"]
 - !private ["CSo37SFSpeechAudioBufferRecognitionRequest", "endAudio"]
@@ -682,13 +699,14 @@ depends-member:
 - !private ["Ps8Sequence", "enumerated"]
 - ["C10SpeechTest20SpeechViewController", "AVAudioEngine"]
 - ["C10SpeechTest20SpeechViewController", "Bool"]
+- ["C10SpeechTest20SpeechViewController", "InterpretedTextView"]
 - !private ["C10SpeechTest20SpeechViewController", "OperationQueue"]
+- ["C10SpeechTest20SpeechViewController", "RecordButton"]
 - ["C10SpeechTest20SpeechViewController", "SFSpeechAudioBufferRecognitionRequest"]
 - ["C10SpeechTest20SpeechViewController", "SFSpeechRecognitionTask"]
 - ["C10SpeechTest20SpeechViewController", "SFSpeechRecognizer"]
 - !private ["C10SpeechTest20SpeechViewController", "SFSpeechURLRecognitionRequest"]
 - ["C10SpeechTest20SpeechViewController", "UIButton"]
-- ["C10SpeechTest20SpeechViewController", "UITextView"]
 - ["C10SpeechTest20SpeechViewController", "UInt32"]
 - !private ["C10SpeechTest20SpeechViewController", "URL"]
 - !private ["C10SpeechTest20SpeechViewController", "Void"]
@@ -704,6 +722,7 @@ depends-member:
 - ["C10SpeechTest20SpeechViewController", "recognitionRequest"]
 - ["C10SpeechTest20SpeechViewController", "recognitionTask"]
 - !private ["C10SpeechTest20SpeechViewController", "recognizeFile"]
+- ["C10SpeechTest20SpeechViewController", "record"]
 - ["C10SpeechTest20SpeechViewController", "recordAction"]
 - ["C10SpeechTest20SpeechViewController", "recordButton"]
 - ["C10SpeechTest20SpeechViewController", "recordingStateIsOn"]
@@ -743,6 +762,7 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "recognitionRequest"]
 - ["PSo21UIAppearanceContainer", "recognitionTask"]
 - ["PSo21UIAppearanceContainer", "recognizeFile"]
+- ["PSo21UIAppearanceContainer", "record"]
 - ["PSo21UIAppearanceContainer", "recordAction"]
 - ["PSo21UIAppearanceContainer", "recordButton"]
 - ["PSo21UIAppearanceContainer", "recordingStateIsOn"]
@@ -775,6 +795,7 @@ depends-member:
 - ["PSo18UIContentContainer", "recognitionRequest"]
 - ["PSo18UIContentContainer", "recognitionTask"]
 - ["PSo18UIContentContainer", "recognizeFile"]
+- ["PSo18UIContentContainer", "record"]
 - ["PSo18UIContentContainer", "recordAction"]
 - ["PSo18UIContentContainer", "recordButton"]
 - ["PSo18UIContentContainer", "recordingStateIsOn"]
@@ -811,6 +832,7 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "recognitionRequest"]
 - ["PSo18UIFocusEnvironment", "recognitionTask"]
 - ["PSo18UIFocusEnvironment", "recognizeFile"]
+- ["PSo18UIFocusEnvironment", "record"]
 - ["PSo18UIFocusEnvironment", "recordAction"]
 - ["PSo18UIFocusEnvironment", "recordButton"]
 - ["PSo18UIFocusEnvironment", "recordingStateIsOn"]
@@ -832,13 +854,14 @@ depends-member:
 - !private ["CSo7UILabel", "text"]
 - ["CSo11UIResponder", "AVAudioEngine"]
 - ["CSo11UIResponder", "Bool"]
+- ["CSo11UIResponder", "InterpretedTextView"]
 - !private ["CSo11UIResponder", "OperationQueue"]
+- ["CSo11UIResponder", "RecordButton"]
 - ["CSo11UIResponder", "SFSpeechAudioBufferRecognitionRequest"]
 - ["CSo11UIResponder", "SFSpeechRecognitionTask"]
 - ["CSo11UIResponder", "SFSpeechRecognizer"]
 - !private ["CSo11UIResponder", "SFSpeechURLRecognitionRequest"]
 - ["CSo11UIResponder", "UIButton"]
-- ["CSo11UIResponder", "UITextView"]
 - ["CSo11UIResponder", "UInt32"]
 - !private ["CSo11UIResponder", "URL"]
 - !private ["CSo11UIResponder", "Void"]
@@ -853,6 +876,7 @@ depends-member:
 - ["CSo11UIResponder", "recognitionRequest"]
 - ["CSo11UIResponder", "recognitionTask"]
 - ["CSo11UIResponder", "recognizeFile"]
+- ["CSo11UIResponder", "record"]
 - ["CSo11UIResponder", "recordAction"]
 - ["CSo11UIResponder", "recordButton"]
 - ["CSo11UIResponder", "recordingStateIsOn"]
@@ -882,6 +906,7 @@ depends-member:
 - ["PSo30UIResponderStandardEditActions", "recognitionRequest"]
 - ["PSo30UIResponderStandardEditActions", "recognitionTask"]
 - ["PSo30UIResponderStandardEditActions", "recognizeFile"]
+- ["PSo30UIResponderStandardEditActions", "record"]
 - ["PSo30UIResponderStandardEditActions", "recordAction"]
 - ["PSo30UIResponderStandardEditActions", "recordButton"]
 - ["PSo30UIResponderStandardEditActions", "recordingStateIsOn"]
@@ -913,6 +938,7 @@ depends-member:
 - ["PSo16UIStateRestoring", "recognitionRequest"]
 - ["PSo16UIStateRestoring", "recognitionTask"]
 - ["PSo16UIStateRestoring", "recognizeFile"]
+- ["PSo16UIStateRestoring", "record"]
 - ["PSo16UIStateRestoring", "recordAction"]
 - ["PSo16UIStateRestoring", "recordButton"]
 - ["PSo16UIStateRestoring", "recordingStateIsOn"]
@@ -943,6 +969,7 @@ depends-member:
 - ["PSo18UITraitEnvironment", "recognitionRequest"]
 - ["PSo18UITraitEnvironment", "recognitionTask"]
 - ["PSo18UITraitEnvironment", "recognizeFile"]
+- ["PSo18UITraitEnvironment", "record"]
 - ["PSo18UITraitEnvironment", "recordAction"]
 - ["PSo18UITraitEnvironment", "recordButton"]
 - ["PSo18UITraitEnvironment", "recordingStateIsOn"]
@@ -961,13 +988,14 @@ depends-member:
 - !private ["CSo6UIView", "titleLabel"]
 - ["CSo16UIViewController", "AVAudioEngine"]
 - ["CSo16UIViewController", "Bool"]
+- ["CSo16UIViewController", "InterpretedTextView"]
 - !private ["CSo16UIViewController", "OperationQueue"]
+- ["CSo16UIViewController", "RecordButton"]
 - ["CSo16UIViewController", "SFSpeechAudioBufferRecognitionRequest"]
 - ["CSo16UIViewController", "SFSpeechRecognitionTask"]
 - ["CSo16UIViewController", "SFSpeechRecognizer"]
 - !private ["CSo16UIViewController", "SFSpeechURLRecognitionRequest"]
 - ["CSo16UIViewController", "UIButton"]
-- ["CSo16UIViewController", "UITextView"]
 - ["CSo16UIViewController", "UInt32"]
 - !private ["CSo16UIViewController", "URL"]
 - !private ["CSo16UIViewController", "Void"]
@@ -983,6 +1011,7 @@ depends-member:
 - ["CSo16UIViewController", "recognitionRequest"]
 - ["CSo16UIViewController", "recognitionTask"]
 - ["CSo16UIViewController", "recognizeFile"]
+- ["CSo16UIViewController", "record"]
 - ["CSo16UIViewController", "recordAction"]
 - ["CSo16UIViewController", "recordButton"]
 - ["CSo16UIViewController", "recordingStateIsOn"]
@@ -1054,6 +1083,7 @@ depends-member:
 - ["Ps9_Hashable", "recognitionRequest"]
 - ["Ps9_Hashable", "recognitionTask"]
 - ["Ps9_Hashable", "recognizeFile"]
+- ["Ps9_Hashable", "record"]
 - ["Ps9_Hashable", "recordAction"]
 - ["Ps9_Hashable", "recordButton"]
 - ["Ps9_Hashable", "recordingStateIsOn"]
@@ -1124,6 +1154,7 @@ depends-nominal:
 - !private "Vs5Int32"
 - !private "Vs5Int64"
 - !private "Vs4Int8"
+- !private "C10SpeechTest19InterpretedTextView"
 - !private "Ps16IteratorProtocol"
 - !private "Ps25LosslessStringConvertible"
 - !private "Ps10MirrorPath"
@@ -1145,6 +1176,7 @@ depends-nominal:
 - !private "Ps26RangeReplaceableCollection"
 - !private "Ps25RangeReplaceableIndexable"
 - !private "Ps16RawRepresentable"
+- !private "C10SpeechTest12RecordButton"
 - "CSo37SFSpeechAudioBufferRecognitionRequest"
 - "CSo26SFSpeechRecognitionRequest"
 - !private "CSo25SFSpeechRecognitionResult"
@@ -1214,4 +1246,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
-interface-hash: "2b9d447bc8b05ba8dedddd6ec43bd4e6"
+interface-hash: "adf9e5bc45333f3231335206ce8694b6"
