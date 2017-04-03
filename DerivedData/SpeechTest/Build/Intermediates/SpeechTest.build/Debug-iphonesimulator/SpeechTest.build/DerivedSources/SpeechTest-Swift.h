@@ -155,7 +155,6 @@ SWIFT_CLASS("_TtC10SpeechTest12RecordButton")
 @property (nonatomic) CGFloat cornerRadius;
 @property (nonatomic, strong) UIColor * _Nonnull borderColor;
 @property (nonatomic) CGFloat borderWidth;
-@property (nonatomic) CGFloat width;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 @end

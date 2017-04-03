@@ -1,8 +1,8 @@
 version: "Apple Swift version 3.0.2 (swiftlang-800.0.63 clang-800.0.42.1)"
 options: "49b814bfb8b9ba8622e32eaf651bd9ad"
-build_time: [544536939, 290803000]
+build_time: [544547627, 947379000]
 inputs:
-  "/Users/jamesjongs/Desktop/Projects/SpeechTest/SpeechTest/ViewController.swift": [544536935, 0]
+  "/Users/jamesjongs/Desktop/Projects/SpeechTest/SpeechTest/ViewController.swift": [544537768, 0]
   "/Users/jamesjongs/Desktop/Projects/SpeechTest/SpeechTest/AppDelegate.swift": [544356860, 0]
   "/Users/jamesjongs/Desktop/Projects/SpeechTest/SpeechTest/InterpretedTextView.swift": [544442936, 0]
-  "/Users/jamesjongs/Desktop/Projects/SpeechTest/SpeechTest/RecordButton.swift": [544445842, 0]
+  "/Users/jamesjongs/Desktop/Projects/SpeechTest/SpeechTest/RecordButton.swift": [544537480, 0]

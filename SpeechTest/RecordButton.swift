@@ -31,11 +31,6 @@ class RecordButton: UIButton {
         }
     }
 
-    @IBInspectable internal var width: CGFloat = 0.0 {
-        didSet {
-            self
-        }
-    }
 
     // MARK: FUNCTIONS
 

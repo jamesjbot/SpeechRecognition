@@ -167,7 +167,7 @@ class SpeechViewController: UIViewController {
     }
 
     // Speech recognition is free, but not unlimted
-    // There is a limit of 1 minute
+    // There is a limit of 1 minute duration.
 }
 
 
