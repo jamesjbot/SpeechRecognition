@@ -28,9 +28,12 @@ class SpeechViewController: UIViewController {
     @IBAction func record(_ sender: Any) {
         if recordingStateIsOn {
             stopRecording()
-            recordButton.titleLabel?.text = "Record"
+            recordButton.setTitle("Record", for: .normal)
+            recordButton.backgroundColor = UIColor.green
         } else {
-            recordButton.titleLabel?.text = "Stop"
+            recordButton.setTitle("Stop", for: .normal)
+            recordButton.backgroundColor = UIColor.red
+
             recordButton.setNeedsDisplay()
             do {
                 textView.text = ""
@@ -146,7 +149,11 @@ class SpeechViewController: UIViewController {
                 self.textView.text.append("\n\(index): \(transcription.formattedString)")
             }
             if result.isFinal {
-                self.textView.text.append("\nFinal")
+                self.textView.text.append("\nNo More Recognition")
+
+                if self.recordingStateIsOn {
+                    self.record(self.recordButton) // Turn off the record button
+                }
             }
         }
     }
